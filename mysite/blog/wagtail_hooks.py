@@ -14,7 +14,7 @@ def global_admin_css():
 class BlogPageAdmin(ModelAdmin):
     model = BlogPage
     menu_label = "Post"
-    menu_icon = "help"
+    menu_icon = "plus-inverse"
     menu_order = 200
     
 

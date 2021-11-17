@@ -1,5 +1,6 @@
 from django.utils.html import format_html
 from django.templatetags.static import static
+from wagtail import search
 
 from wagtail.core import hooks
 
@@ -16,6 +17,7 @@ class BlogPageAdmin(ModelAdmin):
     menu_label = "Post"
     menu_icon = "plus-inverse"
     menu_order = 200
+    list_display = ('date', 'title', 'intro', 'tags',)
     
 
 modeladmin_register(BlogPageAdmin)
